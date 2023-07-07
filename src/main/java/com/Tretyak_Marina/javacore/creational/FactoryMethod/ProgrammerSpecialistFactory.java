@@ -1,0 +1,8 @@
+package main.java.com.Tretyak_Marina.javacore.creational.FactoryMethod;
+
+public class ProgrammerSpecialistFactory implements SpecialistFactory{
+    @Override
+    public Specialist createSpecialist() {
+        return new Programmer();
+    }
+}
