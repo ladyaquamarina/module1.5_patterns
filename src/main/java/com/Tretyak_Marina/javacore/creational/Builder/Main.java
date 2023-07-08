@@ -8,7 +8,7 @@ public class Main {
         System.out.println(house);
         System.out.println();
 
-        director.setBuilder(new ApartmentHouse());
+        director.setBuilder(new ApartmentHouseBuilder());
         house = director.buildHouse();
         System.out.println(house);
     }

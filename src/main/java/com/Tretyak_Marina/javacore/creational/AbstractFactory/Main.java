@@ -1,6 +1,7 @@
 package main.java.com.Tretyak_Marina.javacore.creational.AbstractFactory;
 
 import main.java.com.Tretyak_Marina.javacore.creational.AbstractFactory.BeachBanquet.BeachBanquetFactory;
+import main.java.com.Tretyak_Marina.javacore.creational.AbstractFactory.ItalianBanquet.ItalianBanquetFactory;
 import main.java.com.Tretyak_Marina.javacore.creational.AbstractFactory.JapaneseBanquet.JapaneseBanquetFactory;
 
 public class Main {
@@ -27,6 +28,17 @@ public class Main {
         Administrator administrator = cateringTeamFactory.getAdministrator();
 
         System.out.println("Starting beach party");
+        chef.cook();
+        waiter.serverGuests();
+        administrator.manageHall();
+    }
+    public static void ItalianParty() {
+        CateringTeamFactory cateringTeamFactory = new ItalianBanquetFactory();
+        Chef chef = cateringTeamFactory.getChef();
+        Waiter waiter = cateringTeamFactory.getWaiter();
+        Administrator administrator = cateringTeamFactory.getAdministrator();
+
+        System.out.println("Starting Italian-style banquet");
         chef.cook();
         waiter.serverGuests();
         administrator.manageHall();
